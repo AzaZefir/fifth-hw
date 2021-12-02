@@ -1,0 +1,41 @@
+.d-grid {
+    display: grid;
+}
+/* 1 */
+.min-content-width{
+    grid-template-columns: 1fr min-content 1fr 1fr;
+}
+/* 2 */
+.center {
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(5,100px);
+}
+.center div:nth-child(even) {
+    align-self: center;
+}
+/* 3 */
+.placeContent {
+    grid-template-columns: repeat(2,100px);
+    grid-template-rows: repeat(2,100px);
+    place-content: center;
+}
+
+/* 4 */
+.placeContent-PlaceSelf{
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(5,100px);
+}
+.placeContent-PlaceSelf{
+    place-self: center;
+}
+/* 5 */
+.align-first-last-block{
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(5,100px);
+}
+.align-first-last-block div:nth-child(1) {
+    align-self: center;
+}
+.align-first-last-block div:last-child {
+    align-self: center;
+}
